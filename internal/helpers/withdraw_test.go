@@ -6,15 +6,15 @@ import (
 )
 
 func TestSplitAmountIntoBills(t *testing.T) {
-	amount := 1050
+	amount := 187
 
 	output := map[int]int{
-		100: 10,
-		50:  0,
-		20:  0,
-		10:  0,
-		5:   0,
-		1:   0,
+		100: 1,
+		50:  1,
+		20:  1,
+		10:  1,
+		5:   1,
+		1:   2,
 	}
 
 	result := SplitAmountIntoBills(amount)
