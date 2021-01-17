@@ -5,6 +5,7 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
+	"github.com/raphaelkross/go-withdraw-api/internal/helpers"
 )
 
 // Withdraw Request Controller
@@ -18,5 +19,7 @@ func Withdraw(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, amount)
+	output := helpers.SplitAmountIntoBills(amount)
+
+	c.JSON(http.StatusOK, output)
 }
