@@ -5,19 +5,15 @@ func SplitAmountIntoBills(amount int) map[int]int {
 
 	// Default output where the number of bills are stored.
 	output := map[int]int{
-		100: 0,
-		50:  0,
-		20:  0,
-		10:  0,
-		5:   0,
-		1:   0,
+		50: 0,
+		10: 0,
+		5:  0,
+		1:  0,
 	}
 
 	// Available bills.
 	bills := [...]int{
-		100,
 		50,
-		20,
 		10,
 		5,
 		1,
